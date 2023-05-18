@@ -16,7 +16,7 @@ function App() {
         <Nav />
         <BrowserRouter>
           <Routes>
-            <Route path="/flights" element={<Flight />}></Route>
+            <Route path="/" element={<Flight />}></Route>
           </Routes>
         </BrowserRouter>
       </div>

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import App from "./App";
-
+import img from "../src/images/flight.jpg"
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -11,7 +11,6 @@ root.render(
       className={"container-fluid"}
       style={{
         alignItems: "center",
-        backgroundColor: "light",
         height: "1000vh",
         backgroundPosition: "center",
         backgroundSize: "cover",
