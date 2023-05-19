@@ -268,6 +268,18 @@ main {
 
 
 
+.container-fluid{
+  height: auto;
+  align-items: center;
+  background: url("/Users/decagon/Final_Flight_App/flights/src/images/flight.jpg");
+  background-size:cover;
+  overflow:hidden;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+
+
 
 
 

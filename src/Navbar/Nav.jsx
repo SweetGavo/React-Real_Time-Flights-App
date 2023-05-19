@@ -4,49 +4,43 @@ const Navbar = () => {
   return (
     <>
       <div className={"text-center "}>
-        <h2 bg="light" className={"text-dark mt-5 text-align-center"}>
+        <h2 bg="light" className={"text-light mt-5 text-align-center"}>
           {" "}
           REAL-TIME INFORMATION OF ALL FLIGHTS AROUND THE WORLD
         </h2>
         <ul className={"nav d-flex justify-content-between"}>
           <li className={"nav-item"}>
             <a href="">
-              <h4 className={"btn btn-outline-light btn-lg text-dark"}>
+              <h4 className={"btn btn-outline-dark btn-lg text-light"}>
                 {" "}
-                <FaPlane />
-                <br />
                 AIRCRAFTS
               </h4>
             </a>
           </li>
           <li className={"nav-item"}>
             <a href="">
-              <h4 className={"btn btn-outline-light btn-lg text-dark"}>
+              <h4 className={"btn btn-outline-dark btn-lg text-light"}>
                 {" "}
-                <FaPlane />
-                <br />
                 DASHBOARD
               </h4>
             </a>
           </li>
           <li className={"nav-item"}>
             <a href={""}>
-              <h4 className={"btn btn-outline-light btn-lg text-dark"}>
+              <h4 className={"btn btn-outline-dark btn-lg text-light"}>
                 {" "}
-                <FaPlane />
-                <br />
                 LOGIN
               </h4>
             </a>
           </li>
           <li className={"nav-item"}>
-            <a href="">
-              <h4 className={"btn btn-outline-light btn-lg text-dark"}>
-                {" "}
-                <FaPlane /> <br />
+                          <a href="http://localhost:3000/signup">gg</a>
+              <h4 className={"btn btn-outline-dark btn-lg text-light"}>
+              {" "}
+
                 SIGN UP{" "}
               </h4>
-            </a>
+            
           </li>
         </ul>
       </div>
