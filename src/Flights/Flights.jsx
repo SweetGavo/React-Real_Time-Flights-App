@@ -52,12 +52,21 @@ const Flights = () => {
             </thead>
             <tbody>
               <tr>
-                <td>{item.icao24}</td>
                 <td>
-                  {new Date(item.lastSeen * 1000).toString().slice(16, 25)}
+                  {" "}
+                  <h5 className={"text-light"}>{item.icao24}</h5>
                 </td>
-                <td>{item.estArrivalAirport}</td>
-                <td>{item.estDepartureAirport}</td>
+                <td>
+                  <h5 className={"text-light"}>
+                    {new Date(item.lastSeen * 1000).toString().slice(16, 25)}
+                  </h5>
+                </td>
+                <td>
+                  <h5 className={"text-light"}>{item.estArrivalAirport}</h5>
+                </td>
+                <td>
+                  <h5 className={"text-light"}>{item.estDepartureAirport}</h5>
+                </td>
               </tr>
             </tbody>
           </Table>
@@ -66,7 +75,7 @@ const Flights = () => {
     })
   ) : (
     <h1 className={"text-light text-center mt-5 "} type="">
-      LOADING....
+     LOADING....
     </h1>
   );
 };

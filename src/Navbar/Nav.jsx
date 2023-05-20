@@ -1,5 +1,7 @@
 import React from "react";
 import { FaPlane } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <>
@@ -34,13 +36,12 @@ const Navbar = () => {
             </a>
           </li>
           <li className={"nav-item"}>
-                          <a href="http://localhost:3000/signup">gg</a>
-              <h4 className={"btn btn-outline-dark btn-lg text-light"}>
-              {" "}
-
-                SIGN UP{" "}
-              </h4>
-            
+            <button className={"btn btn-outline-dark btn-lg text-light"}>
+              <a href="/signup" className={"text-light"} style={{ textDecoration: "none"}}>
+                {" "}
+                SIGN UP
+              </a>
+            </button>
           </li>
         </ul>
       </div>

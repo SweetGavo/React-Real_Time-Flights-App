@@ -36,10 +36,6 @@ const Login = ({ setToken }) => {
   return (
     <div className={"signup-wrapper "}>
       <h1 className={"text-grey text-center text-uppercase"}>Sign up</h1>
-      <h3 className={"text-grey text-center"}>
-        {" "}
-        REAL-TIME INFORMATION OF ALL FLIGHTS AROUND THE WORLD
-      </h3>
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-2" controlId={"formBasicName"}>
           <Form.Label
@@ -84,15 +80,18 @@ const Login = ({ setToken }) => {
             alignItems: "center",
           }}
         >
-          <a href="/login">
-            <Button
-              className={"btn-light btn-lg"}
-              variant="primary"
-              type="submit"
+          <Button
+            className={"btn-light btn-lg"}
+            variant="primary"
+            type="submit"
+          >
+            <a
+              href="/login"
+              style={{ textDecoration: "none" }}
             >
-              Submit
-            </Button>
-          </a>
+              SUBMIT
+            </a>
+          </Button>
         </div>
       </Form>
     </div>

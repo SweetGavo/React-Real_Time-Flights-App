@@ -3,7 +3,7 @@ import Flight from "./Flights/Flights";
 import Nav from "./Navbar/Nav";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "../src/Login/login";
-import Signup from "../src/Signup/signup"
+import Signup from "../src/Signup/signup";
 function App() {
   const [token, setToken] = useState();
   if (!token) {
@@ -16,6 +16,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Flight />}></Route>
+        </Routes>
+        <Routes>
+          <Route path="/signup" element={<Signup />}></Route>
         </Routes>
       </BrowserRouter>
     </>
