@@ -1,28 +1,41 @@
-import React, { useState, useEffect } from "react";
-import Flight from "./Flights/Flights";
-import Nav from "./Navbar/Nav";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "../src/Login/login";
-import Signup from "../src/Signup/signup";
-function App() {
-  const [token, setToken] = useState();
-  if (!token) {
-    return <Login setToken={setToken} />;
-  }
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Flights from './components/Flights';
+import NavigationBar from './components/Navbar';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import { AuthProvider } from './context/AuthContext';
+import ProtectedRoute from './components/ProtectedRoute';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
+function App() {
   return (
-    <>
-      <Nav />
-      <BrowserRouter>
+    <AuthProvider>
+      <div>
+        <NavigationBar />
         <Routes>
-          <Route path="/" element={<Flight />}></Route>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route
+            path="/"
+            element={
+              <ProtectedRoute>
+                <Flights />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/flights"
+            element={
+              <ProtectedRoute>
+                <Flights />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
-        <Routes>
-          <Route path="/signup" element={<Signup />}></Route>
-        </Routes>
-      </BrowserRouter>
-    </>
+      </div>
+    </AuthProvider>
   );
 }
 
-export default App;
+export default App; 
